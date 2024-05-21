@@ -1,0 +1,4 @@
+res://Scenes/map.tscn
+res://tile_set.tres
+res://Scenes/NewResourceTile.tscn
+res://Scripts/new_resource_comp.gd

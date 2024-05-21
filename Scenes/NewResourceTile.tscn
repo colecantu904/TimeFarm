@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://d32fp1inep75v"]
 
 [ext_resource type="Script" path="res://Scripts/new_resource_comp.gd" id="1_dkrb0"]
-[ext_resource type="Texture2D" uid="uid://cqb8acu6q7ij" path="res://Assets/RawPictures/picopicofarm.png" id="2_4bxvr"]
-[ext_resource type="TileSet" uid="uid://vby3cub4heeq" path="res://Assets/TileStuff/tile_set.tres" id="3_srriy"]
+[ext_resource type="Texture2D" uid="uid://cqb8acu6q7ij" path="res://picopicofarm.png" id="2_4bxvr"]
+[ext_resource type="TileSet" uid="uid://vby3cub4heeq" path="res://tile_set.tres" id="3_srriy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ubi8a"]
 atlas = ExtResource("2_4bxvr")
@@ -57,7 +57,7 @@ _data = {
 script = ExtResource("1_dkrb0")
 area = NodePath("Area2D")
 anim = NodePath("AnimatedSprite2D")
-icon = NodePath("Node2D/TileMap")
+icon = NodePath("TileMap")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -71,17 +71,13 @@ sprite_frames = SubResource("SpriteFrames_wxtnv")
 animation = &"empty"
 autoplay = "empty"
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-1, -9.99938)
-
-[node name="TileMap" type="TileMap" parent="Node2D"]
+[node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 position = Vector2(-1, -7)
 tile_set = ExtResource("3_srriy")
 format = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Node2D")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap"]
 libraries = {
 "": SubResource("AnimationLibrary_if1rh")
 }

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://beuvenpyjbijs"]
+[gd_scene load_steps=4 format=3 uid="uid://beuvenpyjbijs"]
 
-[ext_resource type="TileSet" uid="uid://vby3cub4heeq" path="res://Assets/TileStuff/tile_set.tres" id="1_vcl1m"]
+[ext_resource type="TileSet" uid="uid://vby3cub4heeq" path="res://tile_set.tres" id="1_vcl1m"]
 [ext_resource type="Script" path="res://Scenes/TimerHelper.gd" id="3_xwptq"]
-[ext_resource type="PackedScene" uid="uid://kxxtn4n8yp53" path="res://Scenes/plant_tile_map.tscn" id="4_57np0"]
 [ext_resource type="PackedScene" uid="uid://d32fp1inep75v" path="res://Scenes/NewResourceTile.tscn" id="4_gb4kd"]
 
 [node name="map" type="Node2D"]
@@ -17,6 +16,7 @@ layer_1/name = "foreground"
 layer_1/tile_data = PackedInt32Array(0, 65536, 5, -196612, 65536, 5, -131076, 65536, 6, -65540, 65536, 7, -196611, 131072, 5, -131075, 131072, 6, -65539, 131072, 7, -196610, 196608, 5, -131074, 196608, 6, -65538, 196608, 7, -2, 196608, 8, -196609, 262144, 5, -131073, 262144, 6, -65537, 262144, 7, -1, 262144, 8, -262144, 327680, 5, -196608, 327680, 6, -131072, 327680, 7, -262143, 393216, 5, -196607, 393216, 6, -131071, 393216, 7, -262142, 458752, 5, -196606, 458752, 6, -131070, 458752, 7, -327677, 720896, 15, -262141, 720896, 16, -196605, 720896, 17, -327676, 786432, 15, -262140, 786432, 16, -196604, 786432, 17, -327675, 851968, 15, -262139, 851968, 16, -196603, 851968, 17, 131067, 0, 15, 262139, 0, 17, 131071, 262144, 15, -65529, 589824, 5, 7, 589824, 6, -65528, 655360, 5, 8, 655360, 6, -65527, 720896, 5, 9, 720896, 6, 262131, 2, 2, 262135, 262146, 2, -262138, 2, 0, -196602, 2, 1, -131066, 2, 2, -262137, 65538, 0, -196601, 65538, 1, -131065, 65538, 2, -262136, 131074, 0, -196600, 131074, 1, -131064, 131074, 2, -262135, 196610, 0, -196599, 196610, 1, -131063, 196610, 2, -262134, 262146, 0, -196598, 262146, 1, -131062, 262146, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(25, -4)
 zoom = Vector2(5, 5)
 
 [node name="GlobalTimer" type="Node" parent="."]
@@ -26,32 +26,27 @@ script = ExtResource("3_xwptq")
 autostart = true
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-36, 21)
+position = Vector2(-22, 19)
 
-[node name="ResourceTileComponent" parent="Node2D" node_paths=PackedStringArray("global_timer", "tile_to_edit") instance=ExtResource("4_gb4kd")]
+[node name="ResourceTileComponent" parent="Node2D" node_paths=PackedStringArray("global_timer") instance=ExtResource("4_gb4kd")]
+position = Vector2(-1, -13)
 global_timer = NodePath("../../GlobalTimer")
-tile_to_edit = NodePath("../PlantTileMap")
-
-[node name="PlantTileMap" parent="Node2D" instance=ExtResource("4_57np0")]
 
 [node name="Node2D2" type="Node2D" parent="."]
 position = Vector2(6, 22)
 
-[node name="ResourceTileComponent" parent="Node2D2" node_paths=PackedStringArray("global_timer", "tile_to_edit", "area") instance=ExtResource("4_gb4kd")]
+[node name="ResourceTileComponent" parent="Node2D2" node_paths=PackedStringArray("global_timer", "area") instance=ExtResource("4_gb4kd")]
+z_index = 1
+position = Vector2(1, 0)
 global_timer = NodePath("../../GlobalTimer")
-tile_to_edit = NodePath("../PlantTileMap")
 area = NodePath("../../Node2D/ResourceTileComponent/Area2D")
-
-[node name="PlantTileMap" parent="Node2D2" instance=ExtResource("4_57np0")]
 
 [node name="Node2D3" type="Node2D" parent="."]
 position = Vector2(42, 23)
 
-[node name="ResourceTileComponent" parent="Node2D3" node_paths=PackedStringArray("global_timer", "tile_to_edit", "area") instance=ExtResource("4_gb4kd")]
+[node name="ResourceTileComponent" parent="Node2D3" node_paths=PackedStringArray("global_timer", "area") instance=ExtResource("4_gb4kd")]
+position = Vector2(-50, -9)
 global_timer = NodePath("../../GlobalTimer")
-tile_to_edit = NodePath("../PlantTileMap")
 area = NodePath("../../Node2D/ResourceTileComponent/Area2D")
-
-[node name="PlantTileMap" parent="Node2D3" instance=ExtResource("4_57np0")]
 
 [connection signal="timeout" from="GlobalTimer/Timer" to="GlobalTimer" method="_on_timer_timeout"]
