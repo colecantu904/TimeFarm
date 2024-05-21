@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://kxxtn4n8yp53"]
+
+[ext_resource type="TileSet" uid="uid://vby3cub4heeq" path="res://Assets/TileStuff/tile_set.tres" id="1_cuuut"]
+[ext_resource type="Script" path="res://Scripts/PlantTileMap.gd" id="2_p010a"]
+
+[node name="PlantTileMap" type="TileMap"]
+texture_filter = 1
+tile_set = ExtResource("1_cuuut")
+format = 2
+script = ExtResource("2_p010a")

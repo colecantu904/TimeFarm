@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://vby3cub4heeq"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://vby3cub4heeq"]
 
 [ext_resource type="Texture2D" uid="uid://cqb8acu6q7ij" path="res://Assets/RawPictures/picopicofarm.png" id="1_qo2un"]
+[ext_resource type="Texture2D" uid="uid://wtngy8kxpdnj" path="res://Assets/RawPictures/fence.png" id="2_ctd3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eajyl"]
 texture = ExtResource("1_qo2un")
@@ -332,7 +333,29 @@ texture_region_size = Vector2i(8, 8)
 1:13/0 = 0
 2:13/0 = 0
 3:13/0 = 0
+0:11/0 = 0
+0:9/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bb6er"]
+texture = ExtResource("2_ctd3m")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:2/0 = 0
+4:2/0 = 0
 
 [resource]
 tile_size = Vector2i(8, 8)
 sources/0 = SubResource("TileSetAtlasSource_eajyl")
+sources/2 = SubResource("TileSetAtlasSource_bb6er")
