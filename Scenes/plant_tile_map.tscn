@@ -5,6 +5,7 @@
 
 [node name="PlantTileMap" type="TileMap"]
 texture_filter = 1
+position = Vector2(0, 1)
 tile_set = ExtResource("1_cuuut")
 format = 2
 script = ExtResource("2_p010a")

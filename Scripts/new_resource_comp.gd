@@ -6,8 +6,8 @@ extends Node2D
 # in runtime, the source will be passed by the player
 @export var resource : Source =Corn.new()
 @export var is_plant : bool = true
-
-
+@export var anim : AnimatedSprite2D
+@export var icon : TileMap
 var hovering_over : bool = false
 var time_started : float
 
@@ -15,10 +15,12 @@ var time_started : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# sets the resources values
 	resource.create()
 
-	tile_to_edit.render_start()
-	tile_to_edit.render_icon(resource)
+	
+	tile_to_edit.add_layer(1)
+	tile_to_edit.set_cell(1, Vector2i(-2,-1), 0, Vector2i(resource.icon_x_atlas, resource.icon_y_atlas))
 	
 	# set the gloabl time started
 	time_started = global_timer.timepassed
@@ -34,16 +36,16 @@ func _process(delta):
 	if resource:
 		if  global_timer.timepassed - time_started > resource.time_to_complete:
 			# render the tiles
-			tile_to_edit.render_done()
+			anim.play("grown")
 			
 			# see if the player clicks on them
 			if hovering_over:
 				# ui element for collection crops
 				if Input.is_action_just_pressed("click"):
 					time_started = global_timer.timepassed
+					tile_to_edit.remove_layer(1)
 					resource = null
-					tile_to_edit.render_start()
-					tile_to_edit.remove_icon()
+					anim.play("empty")
 					print("collected!")
 
 # HANDLES MOUSE HOVERING
