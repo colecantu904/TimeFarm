@@ -1,4 +1,5 @@
-res://Scenes/map.tscn
+res://Scenes/player.tscn
 res://tile_set.tres
+res://Scenes/map.tscn
 res://Scenes/NewResourceTile.tscn
-res://Scripts/new_resource_comp.gd
+res://Scripts/CharacterBody2D.gd
