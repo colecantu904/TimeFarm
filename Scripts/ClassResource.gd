@@ -11,6 +11,7 @@ var icon_x_atlas : int
 var icon_y_atlas : int
 var resource_cost : int
 var resource_rarity : int
+var source_name : String
 
 func get_time():
 	return time_to_complete

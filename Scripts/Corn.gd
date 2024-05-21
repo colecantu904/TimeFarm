@@ -7,3 +7,4 @@ func create():
 	icon_y_atlas = 3
 	resource_cost = 10
 	resource_rarity = 1
+	source_name = "Corn"

@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://vby3cub4heeq"]
 
-[ext_resource type="Texture2D" uid="uid://cqb8acu6q7ij" path="res://Assets/RawPictures/picopicofarm.png" id="1_qo2un"]
+[ext_resource type="Texture2D" uid="uid://cqb8acu6q7ij" path="res://picopicofarm.png" id="1_qo2un"]
 [ext_resource type="Texture2D" uid="uid://wtngy8kxpdnj" path="res://Assets/RawPictures/fence.png" id="2_ctd3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eajyl"]

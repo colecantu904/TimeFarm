@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var inventory : Inventory
 @export var global_timer : Node
 @export var area : Area2D
 # in runtime, the source will be passed by the player
@@ -40,11 +41,18 @@ func _process(delta):
 			if hovering_over:
 				# ui element for collection crops
 				if Input.is_action_just_pressed("click"):
-					time_started = global_timer.timepassed
-					icon.remove_layer(1)
-					resource = null
-					anim.play("empty")
-					print("collected!")
+					# make a signal to the 
+					if inventory.add_to_inventory(resource):
+						time_started = global_timer.timepassed
+						icon.remove_layer(1)
+						resource = null
+						anim.play("empty")
+						print("collected!")
+					else:
+						print(" inventory full!")
+
+func place_resource(resoure : Source):
+	print("placed!")
 
 # HANDLES MOUSE HOVERING
 func _on_area_2d_mouse_entered():

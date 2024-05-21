@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var current_animation = "idle"
-@export var speed = 300
+@export var speed =150
 var angle = 0
 func _physics_process(delta):
 	current_animation = "idle"
