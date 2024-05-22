@@ -1,9 +1,9 @@
 extends Source
 class_name GreenBean
 
-func create():
-	time_to_complete = 15
-	icon_x_atlas = 17
-	icon_y_atlas = 3
-	resource_cost = 10
-	resource_rarity = 1
+var time_to_complete : float = 1
+var icon_x_atlas : int = 17
+var icon_y_atlas : int = 3
+var resource_cost : int = 10
+var resource_rarity : int = 1
+var source_name : String = "GreenBean"

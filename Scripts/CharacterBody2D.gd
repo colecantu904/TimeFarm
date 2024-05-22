@@ -9,7 +9,7 @@ func _physics_process(delta):
 	angle = snappedf(mouse.angle(), PI/4) / (PI/4)
 	angle = wrapi(int(angle), 0, 8)
 
-	if Input.is_action_pressed("click") and mouse.length() > 10:
+	if Input.is_action_pressed("move") and mouse.length() > 10:
 		current_animation = "run"
 		velocity = mouse.normalized() * speed
 		move_and_slide()

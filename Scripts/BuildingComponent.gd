@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var is_hovering : bool = false
 @export var ui_node : Control
@@ -15,8 +15,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_hovering and Input.is_action_just_pressed("ui_accept"):
+		print("showing!")
 		ui_node.show()
-		
+	
+	# also maybe make it for when you exit the ui
 
 
 func _on_area_2d_mouse_entered():

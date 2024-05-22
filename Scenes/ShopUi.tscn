@@ -1,0 +1,245 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckulsxrh44jvn"]
+
+[ext_resource type="TileSet" uid="uid://vby3cub4heeq" path="res://tile_set.tres" id="1_05jul"]
+[ext_resource type="Script" path="res://Scripts/ShopUi.gd" id="1_6pa3w"]
+
+[node name="ShopUi" type="Control" node_paths=PackedStringArray("grid")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+script = ExtResource("1_6pa3w")
+grid = NodePath("GridContainer")
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 87.0
+offset_top = 40.0
+offset_right = -945.0
+offset_bottom = -495.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "  x  "
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_top = 217.0
+offset_right = -1029.0
+offset_bottom = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(18, 18)
+columns = 5
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button2"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button2"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button3"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button3"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button4"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button4"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button5" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button5"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button5"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button6" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button6"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button6"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button7" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button7"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button7"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button8" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button8"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button8"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button9" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button9"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button9"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[node name="Button10" type="Button" parent="GridContainer"]
+layout_mode = 2
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="TileMap" type="TileMap" parent="GridContainer/Button10"]
+texture_filter = 1
+position = Vector2(1.38889, 0.611111)
+scale = Vector2(0.74, 0.74)
+tile_set = ExtResource("1_05jul")
+format = 2
+
+[node name="Label" type="Label" parent="GridContainer/Button10"]
+layout_mode = 0
+offset_left = 1.72222
+offset_top = 7.83333
+offset_right = 54.7222
+offset_bottom = 30.8333
+scale = Vector2(0.15, 0.15)
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

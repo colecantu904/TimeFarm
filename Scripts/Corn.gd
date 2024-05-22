@@ -1,10 +1,10 @@
 extends Source
 class_name Corn
 
-func create():
-	time_to_complete = 5
-	icon_x_atlas = 19
-	icon_y_atlas = 3
-	resource_cost = 10
-	resource_rarity = 1
-	source_name = "Corn"
+var time_to_complete : float = 2
+var icon_x_atlas : int = 19
+var icon_y_atlas : int = 3
+var resource_cost : int = 10
+var resource_rarity : int = 1
+var source_name : String = "Corn"
+

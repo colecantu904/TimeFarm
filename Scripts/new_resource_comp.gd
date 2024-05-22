@@ -4,7 +4,7 @@ extends Node2D
 @export var global_timer : Node
 @export var area : Area2D
 # in runtime, the source will be passed by the player
-@export var resource : Source =Corn.new()
+@export var resource : Source
 @export var is_plant : bool = true
 @export var anim : AnimatedSprite2D
 @export var icon : TileMap
@@ -16,7 +16,6 @@ var time_started : float
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# sets the resources values
-	resource.create()
 
 	icon.add_layer(1)
 	icon.set_cell(1, Vector2i(0,-1), 0, Vector2i(resource.icon_x_atlas, resource.icon_y_atlas))
